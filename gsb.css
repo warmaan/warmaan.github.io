@@ -1,0 +1,207 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /*清除所有标签的初始内外边距*/
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    background-image: url("../img/gsitback2.jpg");
+    /*导航栏背景图*/
+    background-repeat: repeat;
+    background-color: deepskyblue;
+    /*颜色*/
+    height: 100px;
+    /*高度*/
+    width: 100%;
+    /*宽度为<body>的100%，也就是相同宽度*/
+    line-height: 80px;
+    /*行高*/
+    position: absolute;
+    /*绝对定位*/
+    top: 0px;
+    /*距离顶部0像素*/
+    left: 0;
+    /*距离左侧边界0px*/
+}
+
+.nav li {
+    float: left;
+    /*浮动*/
+    width: 75px;
+    /*设置一个<li>宽度*/
+    text-align: center;
+    /*文本居中*/
+}
+
+.ul_top {
+    list-style: none;
+    /*去除列表格式，消除小黑点*/
+    position: absolute;
+    top: 50px;
+    /*距离顶部距离*/
+    left: 60px;
+    /*距离左侧距离*/
+}
+
+.nav a {
+    display: block;
+    /*块状显示*/
+    color: white;
+    /*内容颜色白色*/
+    text-decoration: none;
+    /*去掉下划线*/
+    width: 60px;
+    /*每个宽度*/
+    line-height: 18px;
+    /*行高*/
+
+    /*恢复时的过渡效果*/
+    background-color: transparent;
+    transform: scale(1);
+    transition: background-color 1s,transform 1s;
+}
+
+.nav a:hover {
+    color: white;
+    /*鼠标置于上方显示文本白色*/
+    background-color: rgb(188, 0, 188);
+    transform: scale(1.2);
+    transition: background-color 1s,transform 1s;/*鼠标放置后一秒内变化*/
+}
+
+body {
+    background:linear-gradient(top left,rgb(43, 100, 206),rgb(3, 207, 170));/*背景颜色渐变*/
+    background: -ms-linear-gradient(top left, rgb(43, 100, 206),rgb(3, 207, 170));/*兼容IE的*/
+    background: -webkit-linear-gradient(top left, rgb(43, 100, 206),rgb(3, 207, 170));/*兼容webkit内核*/
+    background: -moz-linear-gradient(top left, rgb(43, 100, 206),rgb(3, 207, 170));/*兼容火狐*/
+    background-repeat: repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+a:visited {/*被访问后的样式*/
+    text-decoration: none;
+    color: #cdc718;
+}
+
+a:link {/*设置超链接的默认样式(未被访问过的样式)*/
+    text-decoration: none;
+    color: #02bcf5;
+}
+
+a:hover {/*鼠标悬停时的效果*/
+    text-decoration: none;
+    color: rgba(0, 85, 255, 0.46);
+    transform: scale(1.2);
+    transition: color 0.5s, transfrom 1s;
+}
+
+a:not(:hover) {/*未被悬停时的样式*/
+    transition: color 1s;
+}
+
+.container {
+    color: #fff;
+    max-width: 1500px;
+    margin: auto;/*水平居中对齐*/
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+.section h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.section p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.country {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.country div {
+    /*flex-basis为占据主轴空间的大小，默认主轴为横向，可以理解为宽度设置，比width具有更高的优先级，需要父类为flex弹性布局*/
+    flex-basis: 45%;/*设为百分比就是每个元素占据父元素宽度的百分比，设为一个合理的值就可以让每行显示需要的元素个数*/
+    margin-bottom: 20px;
+}
+.country h3 {
+    font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.country p {
+    font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+.country img {
+    width: 100%;
+	height: auto;
+	margin-top: 10px;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.country img:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 10px;
+}

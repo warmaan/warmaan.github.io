@@ -1,0 +1,222 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /*清除所有标签的初始内外边距*/
+    padding: 0;
+    margin: 0;
+}
+
+a:link {/*设置超链接的默认样式(未被访问过的样式)*/
+    text-decoration: none;
+    color: #02bcf5;
+}
+
+a:visited {/*被访问后的样式*/
+    text-decoration: none;
+    color: #cdc718;
+}
+
+a:hover {/*鼠标悬停时的效果*/
+    text-decoration: none;
+    color: rgba(0, 162, 255, 0.46);
+    transform: scale(1.2);
+    transition: color 0.5s, transfrom 1s;
+}
+
+a:not(:hover) {/*未被悬停时的样式*/
+    transition: color 1s;
+}
+
+.nav_head {
+    background-image: url("../img/navback.jpg");
+    /*导航栏背景图*/
+    background-size: cover;
+    background-color: deepskyblue;
+    /*颜色*/
+    height: 150px;
+    /*高度*/
+    width: 100%;
+    /*宽度为<body>的100%，也就是相同宽度*/
+    line-height: 80px;
+    /*行高，具体可以看文字位置*/
+    position: absolute;
+    /*绝对定位*/
+    top: 0px;
+    /*距离顶部0像素*/
+    left: 0;
+    /*距离左侧边界0px*/
+}
+
+.nav_head li {
+    float: left;/*左浮动*/
+    width: 90px;
+    text-align: center;
+}
+
+.ul_top_left{
+    list-style: none;
+    /*去除列表格式，消除小黑点*/
+    position: absolute;
+    top: 70px;
+    left: 60px;
+}
+
+.ul_top_right{
+    list-style: none;
+    position: absolute;
+    top: 70px;
+    right: 60px;
+}
+
+.nav_head a {
+    display: block;
+    /*块状显示*/
+    color: white;
+    text-decoration: none;
+    width: 80px;
+    line-height: 30px;
+
+    /*鼠标移出后恢复默认样式*/
+    background-color: transparent;/*默认背景色设置为透明*/
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.nav_head a:hover {
+    background-color: rgb(18, 190, 190);
+    transform: scale(1.2);/*放大1.2倍*/
+    transition: all 1s;
+    /*鼠标放置后一秒内变化*/
+}
+
+
+#nonea {
+    display: block;
+    /*块状显示*/
+    color: white;
+    /*内容颜色白色*/
+    width: 90px;
+    /*每个宽度80px*/
+    line-height: 30px;
+    /*行高30px*/
+}
+
+
+body {
+    background:linear-gradient(top left,rgb(12, 80, 20),rgb(0, 51, 255));/*背景颜色渐变*/
+    background: -ms-linear-gradient(top left, rgb(12, 80, 20),rgb(0, 51, 255));/*兼容IE的*/
+    background: -webkit-linear-gradient(top left, rgb(12, 80, 20),rgb(0, 51, 255));/*兼容webkit内核*/
+    background: -moz-linear-gradient(top left, rgb(12, 80, 20),rgb(0, 51, 255));/*兼容火狐*/
+    background-position: center;
+    font-family: 微软雅黑;
+    color: #fff;
+}
+
+h1 {
+    background: linear-gradient(to bottom,#ffffff, #16590f,#000000);/*从上到下渐变*/
+  	-webkit-background-clip: text;/*渐变效果只对文本生效*/
+    background-clip: text;/*做兼容*/
+  	color: transparent;
+    text-align: center;
+    font-size: 48px;/*字体大小*/
+    margin-top: 20px;
+    position: relative;/*相对定位*/
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+#more {
+    text-align: center;
+    list-style: none;
+}
+
+.section {
+    padding: 50px;
+    background-color: rgba(0, 255, 251, 0.334);
+    margin-top: 50px;
+}
+
+.section h2 {
+    color: #ffd700;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-container img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 10px;
+}
+
+.nav {
+    /*侧方页内导航栏*/
+    position: fixed;/*在网页上的位置固定*/
+    right: -150px;
+    /*初始隐藏在页面右侧外*/
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    transition: right 1s;
+    /*添加过渡效果*/
+}
+
+.nav a {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;/*字体加粗*/
+
+    background-color: transparent;
+    transition: all 1s;
+}
+
+.nav a:hover {
+    color: #fff;
+    background-color: darkcyan;
+    transition: all 1s;
+}
+
+.btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(107, 30, 179);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover+.nav {/*鼠标放在按钮上后让导航栏从右侧外移动至页面右侧*/
+    right: 0;
+}
+
+.nav:hover {/*在导航栏左移的过程中，会导致鼠标悬停的对象发生变化，从按钮变为导航栏，所以要再给导航栏添加一个hover样式*/
+    /*否则就会导致导航栏在鼠标落点处反复横跳*/
+    right: 0;
+}
+html {/*使得页面跳转时平滑移动而不是瞬移*/
+    scroll-behavior: smooth;
+}

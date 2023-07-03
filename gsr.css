@@ -1,0 +1,119 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /*清除所有标签的初始内外边距*/
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e4f0df;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color:black;
+}
+#more{
+    max-width: 1560px;
+    text-align: center;
+    font-family: 幼圆;
+    font-size: 18px;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+.card {
+    width: 30%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.card h2 {
+    font-size: 24px;
+    color:black;
+    margin: 20px;
+}
+.card p {
+    font-size: 16px;
+    color: #424242;
+    margin: 0 20px 20px;
+    line-height: 1.5;
+}
+
+.nav {
+    height: 140px;
+    /*高度140像素*/
+    width: 100%;
+    /*宽度为<body>的100%，也就是相同宽度*/
+    line-height: 80px;
+    /*行高*/
+    position: absolute;
+    /*绝对定位*/
+    top: 0px;
+    /*距离顶部0像素*/
+    left: 0;
+    /*距离左侧边界0px*/
+}
+
+.nav li {
+    background-color: darkcyan;
+    float: left;
+    /*浮动*/
+    width: 75px;
+    text-align: center;
+}
+
+.ul_top {
+    list-style: none;
+    /*去除列表格式，消除小黑点*/
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+.nav a {
+    display: block;
+    /*块状显示*/
+    color: white;
+    /*内容颜色白色*/
+    text-decoration: none;
+    /*去掉下划线*/
+    width: 75px;
+    line-height: 30px;
+}
+
+.nav a:hover {
+    color: white;
+    /*鼠标置于上方显示白色*/
+    background-color:rgb(36, 94, 202);
+    transition: background-color 1s;/*鼠标放置后一秒内变化*/
+}
+
+.nav a:not(:hover){
+    background-color: transparent;
+    transition: background-color 1s;
+}
