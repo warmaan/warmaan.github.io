@@ -10,7 +10,7 @@ body {
 }
 
 .nav {
-    background-image: url("../img/gsitback2.jpg");
+    background-image: url("./gsitback2.jpg");
     /*导航栏背景图*/
     background-repeat: repeat;
     background-color: deepskyblue;

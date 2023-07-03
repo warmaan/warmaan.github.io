@@ -31,7 +31,7 @@ a:not(:hover) {/*未被悬停时的样式*/
 }
 
 .nav_head {
-    background-image: url("../img/navback.jpg");
+    background-image: url("./navback.jpg");
     /*导航栏背景图*/
     background-size: cover;
     background-color: deepskyblue;
