@@ -5,7 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐墙</title>
     <link rel="icon" type="image/x-ico" href="./TheStellarMonments1.ico" />
-    <link href="./gsm.css" type="text/css" rel="stylesheet" />
+    <!--<link href="./gsm.css" type="text/css" rel="stylesheet" />-->
+    <style>
+        body {
+    font-family:'Microsoft Yahei';
+    background-image: url(./musicbackfinal.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 幼圆;
+}
+
+h1 {
+
+    text-align: center;
+    font-size: 35px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /*清除所有标签的初始内外边距*/
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    height: 140px;
+    /*高度140像素*/
+    width: 100%;
+    /*宽度为<body>的100%，也就是相同宽度*/
+    line-height: 80px;
+    /*行高*/
+    position: absolute;
+    /*绝对定位*/
+    top: 0px;
+    /*距离顶部0像素*/
+    left: 0;
+    /*距离左侧边界0px*/
+}
+
+.nav li {
+    float: left;
+    /*浮动*/
+    width: 75px;
+    /*设置一个<li>的宽度*/
+    text-align: center;
+    /*文本居中*/
+}
+
+.ul_top {
+    list-style: none;
+    /*去除列表格式，消除小黑点*/
+    position: absolute;
+    top: 52px;
+    /*距离顶部的距离*/
+    left: 80px;
+    /*距离左侧的距离*/
+}
+
+.nav a {
+    display: block;
+    /*块状显示，一块块的整齐*/
+    color: white;
+    /*内容颜色白色*/
+    text-decoration: none;
+    /*去掉下划线*/
+    width: 80px;
+    /*每个超链接宽度*/
+    line-height: 30px;
+    /*行高*/
+
+    background-color:transparent;/*背景色透明*/
+    transform: scale(1);
+    transition: all 1s;/*所有过渡效果都为1秒*/
+}
+
+.nav a:hover {
+    color: white;
+    /*鼠标置于上方显示白色*/
+    background-color:rgb(237, 168, 100);
+    transform: scale(1.2);
+    transition: all 1s;/*所有过渡效果都为1秒*/
+}
+p{
+    color: #000000;
+    text-align: center;
+    font-size: 19px;
+}
+
+a:link {/*设置超链接的默认样式(未被访问过的样式)*/
+    text-decoration: none;
+    color: #02bcf5;
+}
+
+a:visited {/*被访问后的样式*/
+    text-decoration: none;
+    color: #48cd18;
+}
+
+a:hover {/*鼠标悬停时的效果*/
+    text-decoration: none;
+    color: rgba(0, 162, 255, 0.46);
+    transform: scale(1.2);
+    transition: color 0.5s, transfrom 1s;
+}
+
+a:not(:hover) {/*未被悬停时的样式*/
+    transition: color 1s;
+}
+    </style>
 </head>
 
 <body>

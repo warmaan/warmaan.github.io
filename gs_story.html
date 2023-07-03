@@ -4,8 +4,147 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>原神大致剧情介绍</title>
-    <link href="./gss.css" type="text/css" rel="stylesheet" />
+    <!--<link href="./gss.css" type="text/css" rel="stylesheet" />-->
 	<link rel="icon" type="image/x-ico" href="./paimon4.ico" />
+	<style>
+		body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /*清除所有标签的初始内外边距*/
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e7efed;
+    font-family: 幼圆;
+    margin: auto;
+    padding: 0;
+}
+
+header {
+    background-color: #199dbb;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: center;
+}
+
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.image {
+    flex-basis: 31%;
+    margin: 10px;
+}
+
+.image img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: 260px;
+    transition: transfrom 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+    transition: all 1s;
+    z-index: 9999;/*使图片放大时置于图层顶层，没有生效，或者说不是这么用的*/
+}
+
+.image:not(:hover) img{
+    transform: scale(1);
+    transition: all 1s;
+    z-index: 0;/*使图片缩小时置于图层底*/
+}
+
+
+footer {
+    background-color: #835aff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.back{
+    list-style: none;
+    margin-top: 10px;
+    background-color: #199dbb;
+    float: left;
+    /*浮动*/
+    width: 75px;
+    /*设置一个<li>的宽度*/
+    text-align: center;
+    /*文本居中*/
+}
+.back a{
+    display: block;
+    /*块状显示*/
+    color: white;
+    /*内容颜色白色*/
+    text-decoration: none;
+    /*去掉下划线*/
+    width: 75px;
+    /*每个超链接的宽度*/
+    line-height: 30px;
+    /*行高30px*/
+}
+.back a:hover{
+    color: white;
+    /*鼠标置于上方显示白色*/
+    background-color:rgb(36, 94, 202);
+    transform: scale(1.1);
+    transition: all 1s;/*鼠标放置后一秒内变化*/
+}
+.back a:not(:hover){
+    background-color: transparent;
+    transform: scale(1);
+    transition: all 1s;
+}
+	</style>
 </head>
 <body>
 	<header>
